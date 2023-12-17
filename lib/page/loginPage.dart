@@ -42,11 +42,11 @@ class _LoginPageState extends State<LoginPage> {
               TextField(
                   controller: userController,
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: "User Name")),
+                      border: OutlineInputBorder(), labelText: "User Name (joao)")),
               SizedBox(height: 10),
               TextField(
                   controller: passwordController,
-                  decoration: InputDecoration(border: OutlineInputBorder(), labelText: "Password"),
+                  decoration: InputDecoration(border: OutlineInputBorder(), labelText: "Password (1234)"),
                   obscureText: true),
               SizedBox(height: 15),
               Row(

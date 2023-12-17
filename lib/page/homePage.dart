@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_app/page/loginPage.dart';
+import 'package:to_do_app/page/todoPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,6 +33,16 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             DrawerHeader(child: Icon(Icons.favorite, size: 50), ),
+            ListTile(
+              leading: Icon(Icons.note),
+              title: Text("ToDo"),
+              onTap: (){
+                Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => TodoPage()));
+              },
+            ),
             ListTile(
               leading: Icon(Icons.settings), 
               title: Text("Settings"), 
