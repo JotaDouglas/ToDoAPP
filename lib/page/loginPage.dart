@@ -38,6 +38,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Image.asset('assets/logo.jpg', height: 240, width: double.infinity,),
               TextField(
                   controller: userController,
                   decoration: InputDecoration(
@@ -45,8 +46,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 10),
               TextField(
                   controller: passwordController,
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: "Password"),
+                  decoration: InputDecoration(border: OutlineInputBorder(), labelText: "Password"),
                   obscureText: true),
               SizedBox(height: 15),
               Row(
@@ -67,7 +67,10 @@ class _LoginPageState extends State<LoginPage> {
                         child: Text("Go!")),
                   ),
                 ],
-              )
+              ),
+
+              // Change Password
+              TextButton(onPressed: (){}, child: Text("forgot your Password? Click here."))
             ],
           ),
         ),
