@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:to_do_app/util/toDoTile.dart';
 
 class TodoPage extends StatelessWidget {
   const TodoPage({super.key});
@@ -11,10 +14,11 @@ class TodoPage extends StatelessWidget {
         backgroundColor: Colors.blue[500],
         centerTitle: true,
       ),
-      body: const Column(
+      body: ListView(
         children: [
-          Text("hello this is to do!")
+          TodoTiles(todoText: 'Hello'),
+          
         ],
-      ),
+      )
     );
 }}
