@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -14,14 +14,25 @@ class TodoTiles extends StatefulWidget {
 class _TodoTilesState extends State<TodoTiles> {
   bool checkTask = false;
 
+  void taskConclude(){
+    if(checkTask = false){
+      setState(() {
+        
+      });
+    }else{}
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 8, right: 9, top: 6,),
       child: Container(
-        height: 50,
-        width: double.infinity,
-        color: Colors.blue[200],
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color:checkTask?Colors.blue[500]:Colors.blue[200],
+        ),
+        height: 60,
+        width: double.infinity,        
         child: Row(
           children: [
             Checkbox(
@@ -33,7 +44,13 @@ class _TodoTilesState extends State<TodoTiles> {
                 }
                 );
             }),
-            Text(widget.todoText)
+            Text(widget.todoText, 
+            style: TextStyle(
+              decoration: checkTask?TextDecoration.lineThrough:TextDecoration.none,
+              fontSize: 22,
+              fontWeight: FontWeight.bold),
+              
+              )
           ],
         ),
       ),

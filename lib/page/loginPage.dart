@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   void checkLogin(){
     String userCheck = userController.text;
     String passwordCheck = passwordController.text;
-
+  
     if(userCheck == "joao" && passwordCheck == "1234"){
       Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
     }else{

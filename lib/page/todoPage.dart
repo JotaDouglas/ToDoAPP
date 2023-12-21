@@ -14,11 +14,19 @@ class TodoPage extends StatelessWidget {
         backgroundColor: Colors.blue[500],
         centerTitle: true,
       ),
-      body: ListView(
-        children: [
-          TodoTiles(todoText: 'Hello'),
-          
-        ],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.blue[300],
+        child: Icon(Icons.add),
+        ),
+      body: Container(
+        decoration: BoxDecoration(color: Colors.blue[50]),
+        child: ListView(
+          children: [
+            TodoTiles(todoText: 'Hello'),
+            TodoTiles(todoText: 'oI'),
+          ],
+        ),
       )
     );
 }}
